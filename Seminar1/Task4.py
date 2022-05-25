@@ -6,9 +6,9 @@
 # A (7,-5); B (1,-1) -> 7,21
 from math import sqrt
 
-def Get_distance(x_first,y_first,x_second,y_second):
-    x_distance = x_second - x_first
-    y_distance = y_second - y_first
+def Get_distance(x1,y1,x2,y2):
+    x_distance = x2 - x1
+    y_distance = y2 - y1
 
     return sqrt((x_distance**2) + (y_distance**2))
 
