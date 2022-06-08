@@ -3,6 +3,5 @@
 import re
 string_number = '4.5 4 23 9 1 4 5 0.1'
 list = [float(s)for s in re.findall(r'-?\d+\.?\d*', string_number)]
-
 print(f'Максимальное число {max(list)}')
 print(f'Минимальное число {min(list)}')
