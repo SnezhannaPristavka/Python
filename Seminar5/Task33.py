@@ -17,3 +17,7 @@ k = randint(1,11)
 list = random_coef(k)
 with open('polinom.txt', 'w') as data:
     data.writelines(polynomial(list,k))
+k_1 = randint(1,11)
+list_1 = random_coef(k_1)
+with open('polinom_2.txt', 'w') as data_1:
+    data.writelines(polynomial(list,k))
