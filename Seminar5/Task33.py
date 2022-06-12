@@ -7,7 +7,7 @@ def random_coef(deg_ree):
     return random_list
 
 def polynomial(list_arg,degree):
-    result_list = [str(list_arg[i])+'*x^'+str(degree-i) for i in range(degree) if list_arg[i] != 0]
+    result_list = [str(list_arg[i]) + ' *x^'+str(degree-i) for i in range(degree) if list_arg[i] != 0]
     if list_arg[-1] != 0:
         result_list.append(str(list_arg[-1])) 
     result = ' + '.join(result_list) + ' = 0'
@@ -17,7 +17,8 @@ k = randint(1,11)
 list = random_coef(k)
 with open('polinom.txt', 'w') as data:
     data.writelines(polynomial(list,k))
+
 k_1 = randint(1,11)
 list_1 = random_coef(k_1)
-with open('polinom_2.txt', 'w') as data_1:
-    data.writelines(polynomial(list,k))
+with open('polinom_1.txt', 'w') as file:
+    file.writelines(polynomial(list_1,k_1))
