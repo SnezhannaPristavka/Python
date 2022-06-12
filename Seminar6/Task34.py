@@ -1,5 +1,5 @@
 # Даны два файла в каждом из которых находится запись многочлена. Сформировать файл содержащий сумму многочленов.
-
+# Если нужно поменять многочлен запустите Task33
 path = 'polinom.txt'
 f = open(path, 'r')
 data = f.read().split()
@@ -18,9 +18,9 @@ sum = 0
 duplicate = 0
 
 if len(data) > len(data_one):
-    for i in range(0, len(data)):
+    for i in range(0, len(data)-1):
         if 'x' in data[i] or data[i] == '=':
-            for j in range(0, len(data_one)):
+            for j in range(0, len(data_one)-1):
                 if data[i] == data_one[j]:
                     sum = str(int(data[i-1])+int(data_one[j-1]))
                     result.append(sum + data_one[j])
@@ -32,9 +32,9 @@ if len(data) > len(data_one):
                 uniqum = 0
             duplicate = 0   
 else:
-    for i in range(0, len(data_one)):
+    for i in range(0, len(data_one)-1):
         if 'x' in data_one[i] or data_one[i] == '=':
-            for j in range(0, len(data)):
+            for j in range(0, len(data)-1):
                 if data_one[i] == data[j]:
                     sum = str(int(data_one[i-1])+int(data[j-1]))
                     result.append(sum + data[j])
